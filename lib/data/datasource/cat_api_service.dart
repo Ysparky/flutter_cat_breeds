@@ -10,13 +10,14 @@ class CatApiService {
   final String apiKey;
 
   Future<List<BreedModel>> getBreeds() async {
-    final response = await http.get(Uri.parse('$baseUrl/breeds'));
+    final response = await http.get(Uri.parse('$baseUrl/breeds?limit=20'));
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body) as List<dynamic>;
-      return data
+      final breeds = data
           .map((e) => BreedModel.fromJson(e as Map<String, dynamic>))
           .toList();
+      return breeds;
     } else {
       throw Exception('Failed to load breeds');
     }

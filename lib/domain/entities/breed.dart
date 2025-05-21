@@ -1,4 +1,3 @@
-import 'package:flutter_cat_breeds/domain/entities/image.dart';
 import 'package:flutter_cat_breeds/domain/entities/weight.dart';
 
 class Breed {
@@ -6,7 +5,6 @@ class Breed {
     required this.weight,
     required this.id,
     required this.name,
-    required this.vetStreetUrl,
     required this.temperament,
     required this.origin,
     required this.countryCodes,
@@ -26,28 +24,28 @@ class Breed {
     required this.sheddingLevel,
     required this.socialNeeds,
     required this.strangerFriendly,
-    required this.vocalization,
+    required this.vocalisation,
     required this.hairless,
     required this.natural,
     required this.rare,
     required this.rex,
     required this.suppressedTail,
     required this.shortLegs,
-    required this.wikipediaUrl,
     required this.hypoallergenic,
     required this.referenceImageId,
-    required this.image,
     this.cfaUrl,
-    this.vcaHospitalsUrl,
+    this.vetstreetUrl,
+    this.vcahospitalsUrl,
     this.lap,
+    this.wikipediaUrl,
   });
 
   final Weight weight;
   final String id;
   final String name;
   final String? cfaUrl;
-  final String vetStreetUrl;
-  final String? vcaHospitalsUrl;
+  final String? vetstreetUrl;
+  final String? vcahospitalsUrl;
   final String temperament;
   final String origin;
   final String countryCodes;
@@ -68,15 +66,14 @@ class Breed {
   final int sheddingLevel;
   final int socialNeeds;
   final int strangerFriendly;
-  final int vocalization;
+  final int vocalisation;
   final int hairless;
   final int natural;
   final int rare;
   final int rex;
   final int suppressedTail;
   final int shortLegs;
-  final String wikipediaUrl;
+  final String? wikipediaUrl;
   final int hypoallergenic;
   final String referenceImageId;
-  final Image image;
 }

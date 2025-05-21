@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_cat_breeds/core/theme/app_colors.dart';
 import 'package:flutter_cat_breeds/core/theme/app_typography.dart';
-import 'app_colors.dart';
 
 class AppTheme {
   AppTheme._();
@@ -11,7 +11,7 @@ class AppTheme {
       brightness: Brightness.light,
       scaffoldBackgroundColor: AppColors.background,
       primaryColor: AppColors.primary,
-      colorScheme: ColorScheme.light(
+      colorScheme: const ColorScheme.light(
         primary: AppColors.primary,
         secondary: AppColors.secondary,
         surface: AppColors.background,

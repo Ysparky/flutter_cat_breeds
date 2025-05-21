@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'app_colors.dart';
+import 'package:flutter_cat_breeds/core/theme/app_colors.dart';
 
 class AppTypography {
   AppTypography._();

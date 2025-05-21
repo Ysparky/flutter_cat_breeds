@@ -27,7 +27,6 @@ class Breed {
     required this.socialNeeds,
     required this.strangerFriendly,
     required this.vocalization,
-    required this.experimental,
     required this.hairless,
     required this.natural,
     required this.rare,
@@ -70,7 +69,6 @@ class Breed {
   final int socialNeeds;
   final int strangerFriendly;
   final int vocalization;
-  final int experimental;
   final int hairless;
   final int natural;
   final int rare;

@@ -4,11 +4,13 @@ import 'package:flutter_cat_breeds/data/models/breed_model.dart';
 import 'package:http/http.dart' as http;
 
 class CatApiService {
-  CatApiService({required http.Client client}) : _client = client;
-  final http.Client _client;
+  CatApiService({required this.baseUrl, required this.apiKey});
+
+  final String baseUrl;
+  final String apiKey;
 
   Future<List<BreedModel>> getBreeds() async {
-    final response = await _client.get(Uri.parse('/breeds'));
+    final response = await http.get(Uri.parse('$baseUrl/breeds'));
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body) as List<dynamic>;
@@ -21,7 +23,9 @@ class CatApiService {
   }
 
   Future<List<BreedModel>> searchBreed(String query) async {
-    final response = await _client.get(Uri.parse('/breeds/search?q=$query'));
+    final response = await http.get(
+      Uri.parse('$baseUrl/breeds/search?q=$query'),
+    );
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body) as List<dynamic>;

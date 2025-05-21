@@ -2,7 +2,7 @@ import 'package:flutter_cat_breeds/domain/entities/breed.dart';
 import 'package:flutter_cat_breeds/domain/repositories/cat_repository.dart';
 
 class SearchBreed {
-  SearchBreed(this.catRepository);
+  SearchBreed({required this.catRepository});
 
   final CatRepository catRepository;
 

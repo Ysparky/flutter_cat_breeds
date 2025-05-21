@@ -4,7 +4,8 @@ import 'package:flutter_cat_breeds/domain/entities/breed.dart';
 import 'package:flutter_cat_breeds/domain/repositories/cat_repository.dart';
 
 class CatRepositoryImpl implements CatRepository {
-  CatRepositoryImpl(this._catApiService);
+  CatRepositoryImpl({required CatApiService catApiService})
+    : _catApiService = catApiService;
   final CatApiService _catApiService;
 
   @override

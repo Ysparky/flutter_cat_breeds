@@ -9,16 +9,10 @@ class CountryUtils {
     ]);
   }
 
-  static String getCountryInitials(String country) {
-    final words = country.split(' ');
-    if (words.length <= 2) return country;
-
-    return words.map((word) => word[0].toUpperCase()).join();
-  }
-
   static String formatCountry(String country) {
-    return country.split(' ').length > 2
-        ? getCountryInitials(country)
+    final words = country.split(' ');
+    return words.length >= 2
+        ? words.map((word) => word[0].toUpperCase()).join()
         : country;
   }
 }

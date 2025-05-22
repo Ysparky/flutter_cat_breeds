@@ -5,7 +5,7 @@ class AppTypography {
   AppTypography._();
 
   static const TextStyle headlineLarge = TextStyle(
-    fontSize: 26,
+    fontSize: 32,
     fontWeight: FontWeight.bold,
     color: AppColors.textPrimary,
   );

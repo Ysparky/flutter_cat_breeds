@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cat_breeds/core/utils/country_utils.dart';
 import 'package:flutter_cat_breeds/presentation/widgets/info_chip.dart';
@@ -45,11 +46,14 @@ class BreedCard extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(32),
-              child: Image.network(
-                imageUrl,
+              child: CachedNetworkImage(
+                imageUrl: imageUrl,
                 fit: BoxFit.cover,
-                cacheWidth: (size.width * 1.5).toInt(),
-                cacheHeight: (cardHeight * 1.5).toInt(),
+                memCacheWidth: (size.width * 1.5).toInt(),
+                memCacheHeight: (cardHeight * 1.5).toInt(),
+                placeholder: (context, url) =>
+                    const Center(child: CircularProgressIndicator.adaptive()),
+                errorWidget: (context, url, error) => const Icon(Icons.error),
               ),
             ),
             Container(

@@ -120,7 +120,7 @@ lib/
 
 1. Clonar el repositorio:
 ```bash
-git clone [URL_DEL_REPOSITORIO]
+git clone https://github.com/Ysparky/flutter_cat_breeds
 ```
 
 2. Instalar dependencias:

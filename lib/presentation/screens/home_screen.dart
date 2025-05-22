@@ -57,17 +57,7 @@ class HomeScreen extends ConsumerWidget {
                     );
                   }
 
-                  final breed = data[index].breed;
-                  final image = data[index].image;
-
-                  return BreedCard(
-                    id: breed.id,
-                    name: breed.name,
-                    imageUrl: image.url,
-                    countryCode: breed.countryCode,
-                    origin: breed.origin,
-                    lifeSpan: breed.lifeSpan,
-                  );
+                  return BreedCard(breedWithImage: data[index]);
                 },
               ),
             ),

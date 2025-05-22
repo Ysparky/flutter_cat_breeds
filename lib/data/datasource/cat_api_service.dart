@@ -10,9 +10,9 @@ class CatApiService {
   final String baseUrl;
   final String apiKey;
 
-  Future<List<BreedModel>> getBreeds() async {
+  Future<List<BreedModel>> getBreeds({int page = 0, int limit = 10}) async {
     final response = await http.get(
-      Uri.parse('$baseUrl/breeds?limit=10&page=0'),
+      Uri.parse('$baseUrl/breeds?limit=$limit&page=$page'),
     );
 
     if (response.statusCode == 200) {

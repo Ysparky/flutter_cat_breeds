@@ -77,24 +77,6 @@ final getBreedsProvider = AutoDisposeProvider<GetBreeds>.internal(
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
 typedef GetBreedsRef = AutoDisposeProviderRef<GetBreeds>;
-String _$getBreedsAsyncHash() => r'138269ce09aa74f91cd300813c3021b3e4e6fa99';
-
-/// See also [getBreedsAsync].
-@ProviderFor(getBreedsAsync)
-final getBreedsAsyncProvider =
-    AutoDisposeFutureProvider<List<BreedWithImage>>.internal(
-      getBreedsAsync,
-      name: r'getBreedsAsyncProvider',
-      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-          ? null
-          : _$getBreedsAsyncHash,
-      dependencies: null,
-      allTransitiveDependencies: null,
-    );
-
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-typedef GetBreedsAsyncRef = AutoDisposeFutureProviderRef<List<BreedWithImage>>;
 String _$searchBreedHash() => r'9f41681cf2324ae6f858f0a0786a4e5f27a3186c';
 
 /// See also [searchBreed].

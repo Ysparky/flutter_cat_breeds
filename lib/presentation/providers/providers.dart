@@ -1,7 +1,6 @@
 import 'package:flutter_cat_breeds/core/config/environment.dart';
 import 'package:flutter_cat_breeds/data/datasource/cat_api_service.dart';
 import 'package:flutter_cat_breeds/data/repositories/cat_repository_impl.dart';
-import 'package:flutter_cat_breeds/domain/entities/breed_with_image.dart';
 import 'package:flutter_cat_breeds/domain/repositories/cat_repository.dart';
 import 'package:flutter_cat_breeds/domain/usecases/get_breeds.dart';
 import 'package:flutter_cat_breeds/domain/usecases/search_breed.dart';
@@ -29,11 +28,6 @@ CatRepository catRepository(Ref ref) {
 @riverpod
 GetBreeds getBreeds(Ref ref) {
   return GetBreeds(catRepository: ref.watch(catRepositoryProvider));
-}
-
-@riverpod
-Future<List<BreedWithImage>> getBreedsAsync(Ref ref) async {
-  return GetBreeds(catRepository: ref.watch(catRepositoryProvider)).call();
 }
 
 @riverpod

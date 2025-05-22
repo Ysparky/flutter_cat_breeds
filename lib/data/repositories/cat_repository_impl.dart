@@ -11,8 +11,8 @@ class CatRepositoryImpl implements CatRepository {
   final CatApiService _catApiService;
 
   @override
-  Future<List<Breed>> getBreeds() async {
-    final breeds = await _catApiService.getBreeds();
+  Future<List<Breed>> getBreeds({int page = 0, int limit = 10}) async {
+    final breeds = await _catApiService.getBreeds(page: page, limit: limit);
     return breeds.map((e) => e.toEntity()).toList();
   }
 

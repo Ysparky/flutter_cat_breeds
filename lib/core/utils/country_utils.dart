@@ -10,9 +10,10 @@ class CountryUtils {
   }
 
   static String formatCountry(String country) {
-    final words = country.split(' ');
+    final mainName = country.split('(').first.trim();
+    final words = mainName.split(' ');
     return words.length >= 2
         ? words.map((word) => word[0].toUpperCase()).join()
-        : country;
+        : mainName;
   }
 }

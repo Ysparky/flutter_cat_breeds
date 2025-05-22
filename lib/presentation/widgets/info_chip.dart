@@ -31,13 +31,13 @@ class InfoChip extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           icon,
-          const SizedBox(width: 6),
-          Text(
-            label,
-            style: TextStyle(
-              color: textColor,
-              fontSize: 14,
-              fontWeight: FontWeight.w500,
+          const SizedBox(width: 8),
+          Flexible(
+            child: Text(
+              label,
+              style: TextStyle(fontSize: 14, color: textColor, height: 1.2),
+              overflow: TextOverflow.ellipsis,
+              maxLines: 1,
             ),
           ),
         ],

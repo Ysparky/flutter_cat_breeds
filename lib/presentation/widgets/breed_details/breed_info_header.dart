@@ -23,27 +23,31 @@ class BreedInfoHeader extends StatelessWidget {
         const SizedBox(height: 16),
         Row(
           children: [
-            InfoChip(
-              icon: Text(
-                CountryUtils.countryCodeToEmoji(breed.countryCode),
-                style: const TextStyle(fontSize: 14),
+            Expanded(
+              child: InfoChip(
+                icon: Text(
+                  CountryUtils.countryCodeToEmoji(breed.countryCode),
+                  style: const TextStyle(fontSize: 14),
+                ),
+                label: breed.origin,
+                textColor: Colors.black87,
+                backgroundColor: Colors.grey[100],
+                borderColor: Colors.grey[300],
               ),
-              label: breed.origin,
-              textColor: Colors.black87,
-              backgroundColor: Colors.grey[100],
-              borderColor: Colors.grey[300],
             ),
-            const Spacer(),
-            InfoChip(
-              icon: const Icon(
-                Icons.timer_outlined,
-                color: Colors.black54,
-                size: 16,
+            const SizedBox(width: 12),
+            Expanded(
+              child: InfoChip(
+                icon: const Icon(
+                  Icons.timer_outlined,
+                  color: Colors.black54,
+                  size: 16,
+                ),
+                label: '${breed.lifeSpan} years',
+                textColor: Colors.black87,
+                backgroundColor: Colors.grey[100],
+                borderColor: Colors.grey[300],
               ),
-              label: '${breed.lifeSpan} years',
-              textColor: Colors.black87,
-              backgroundColor: Colors.grey[100],
-              borderColor: Colors.grey[300],
             ),
           ],
         ),

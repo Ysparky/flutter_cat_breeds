@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cat_breeds/domain/entities/breed_with_image.dart';
 import 'package:flutter_cat_breeds/presentation/features/breed_details/widgets/index.dart';
+import 'package:go_router/go_router.dart';
 
 class BreedDetailsScreen extends StatelessWidget {
   const BreedDetailsScreen({required this.breedWithImage, super.key});
@@ -52,7 +53,7 @@ class BreedDetailsScreen extends StatelessWidget {
                 backgroundColor: Colors.black.withValues(alpha: .5),
                 child: IconButton(
                   icon: const Icon(Icons.arrow_back, color: Colors.white),
-                  onPressed: () => Navigator.of(context).pop(),
+                  onPressed: () => context.pop(),
                 ),
               ),
             ),

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_cat_breeds/core/routes/route_names.dart';
 import 'package:flutter_cat_breeds/presentation/features/home/providers/index.dart';
 import 'package:flutter_cat_breeds/presentation/features/home/widgets/breed_card.dart';
-import 'package:flutter_cat_breeds/presentation/features/search/screens/search_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
@@ -35,14 +36,7 @@ class HomeScreen extends ConsumerWidget {
                   ),
                   const Spacer(),
                   IconButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute<void>(
-                          builder: (context) => const SearchScreen(),
-                        ),
-                      );
-                    },
+                    onPressed: () => context.pushNamed(RouteNames.search),
                     icon: const Icon(
                       Icons.search,
                       size: 28,

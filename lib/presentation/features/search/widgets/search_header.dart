@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cat_breeds/presentation/features/search/widgets/search_bar.dart';
+import 'package:go_router/go_router.dart';
 
 class SearchHeader extends StatelessWidget {
   const SearchHeader({
@@ -22,7 +23,7 @@ class SearchHeader extends StatelessWidget {
       child: Row(
         children: [
           IconButton(
-            onPressed: onBackPressed,
+            onPressed: () => context.pop(),
             icon: const Icon(Icons.arrow_back),
           ),
           Expanded(

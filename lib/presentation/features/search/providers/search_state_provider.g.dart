@@ -27,7 +27,7 @@ final searchTextControllerProvider =
 
 typedef _$SearchTextController =
     AutoDisposeNotifier<Raw<TextEditingController>>;
-String _$isSearchingHash() => r'8fd44af5a422c660dd2870ebff4393906b592ea9';
+String _$isSearchingHash() => r'82845b829700a4d6874fd083e264eb541f973b70';
 
 /// See also [IsSearching].
 @ProviderFor(IsSearching)

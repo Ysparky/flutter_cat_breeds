@@ -3,6 +3,7 @@ import 'package:flutter_cat_breeds/core/utils/debouncer.dart';
 import 'package:flutter_cat_breeds/presentation/features/search/providers/index.dart';
 import 'package:flutter_cat_breeds/presentation/features/search/widgets/index.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 final _debouncerProvider = Provider((ref) {
   final debouncer = Debouncer();
@@ -55,7 +56,7 @@ class SearchScreen extends ConsumerWidget {
                 onClear: () => _onClearSearch(ref),
                 onBackPressed: () {
                   _hideKeyboard(context);
-                  Navigator.pop(context);
+                  context.pop();
                 },
               ),
               const SizedBox(height: 24),

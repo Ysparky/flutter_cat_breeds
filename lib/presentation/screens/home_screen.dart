@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cat_breeds/presentation/providers/breeds_provider.dart';
 import 'package:flutter_cat_breeds/presentation/providers/pagination_provider.dart';
+import 'package:flutter_cat_breeds/presentation/providers/scroll_provider.dart';
 import 'package:flutter_cat_breeds/presentation/widgets/breed_card.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -11,6 +12,8 @@ class HomeScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final breeds = ref.watch(breedsNotifierProvider);
     final pagination = ref.watch(paginationNotifierProvider);
+    final scrollController = ref.watch(scrollControllerProvider);
+    final showScrollToTop = ref.watch(showScrollToTopProvider);
 
     return Scaffold(
       body: Padding(
@@ -36,6 +39,7 @@ class HomeScreen extends ConsumerWidget {
                 return false;
               },
               child: ListView.builder(
+                controller: scrollController,
                 itemCount: data.length + (pagination.hasMore ? 1 : 0),
                 padding: const EdgeInsets.symmetric(
                   horizontal: 20,
@@ -84,6 +88,20 @@ class HomeScreen extends ConsumerWidget {
           ),
           loading: () =>
               const Center(child: CircularProgressIndicator.adaptive()),
+        ),
+      ),
+      floatingActionButton: AnimatedOpacity(
+        opacity: showScrollToTop ? 1.0 : 0.0,
+        duration: const Duration(milliseconds: 200),
+        child: FloatingActionButton(
+          onPressed: showScrollToTop
+              ? () => scrollController.animateTo(
+                  0,
+                  duration: const Duration(milliseconds: 500),
+                  curve: Curves.easeInOut,
+                )
+              : null,
+          child: const Icon(Icons.arrow_upward),
         ),
       ),
     );

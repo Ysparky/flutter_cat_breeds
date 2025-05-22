@@ -1,4 +1,3 @@
-import 'package:flutter_cat_breeds/domain/entities/breed_image.dart';
 import 'package:flutter_cat_breeds/domain/entities/weight.dart';
 
 class Breed {
@@ -34,12 +33,11 @@ class Breed {
     required this.shortLegs,
     required this.hypoallergenic,
     required this.referenceImageId,
-    this.cfaUrl,
-    this.vetstreetUrl,
-    this.vcahospitalsUrl,
-    this.lap,
-    this.wikipediaUrl,
-    this.image,
+    required this.cfaUrl,
+    required this.vetstreetUrl,
+    required this.vcahospitalsUrl,
+    required this.lap,
+    required this.wikipediaUrl,
   });
 
   final Weight weight;
@@ -78,5 +76,4 @@ class Breed {
   final String? wikipediaUrl;
   final int hypoallergenic;
   final String referenceImageId;
-  final BreedImage? image;
 }

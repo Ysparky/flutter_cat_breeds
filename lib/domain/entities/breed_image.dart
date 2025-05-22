@@ -1,5 +1,5 @@
 class BreedImage {
-  BreedImage({
+  const BreedImage({
     required this.id,
     required this.width,
     required this.height,

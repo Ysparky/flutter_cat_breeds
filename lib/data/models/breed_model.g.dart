@@ -37,7 +37,7 @@ _BreedModel _$BreedModelFromJson(Map<String, dynamic> json) => _BreedModel(
   suppressedTail: (json['suppressed_tail'] as num).toInt(),
   shortLegs: (json['short_legs'] as num).toInt(),
   hypoallergenic: (json['hypoallergenic'] as num).toInt(),
-  referenceImageId: json['reference_image_id'] as String,
+  referenceImageId: json['reference_image_id'] as String?,
   cfaUrl: json['cfa_url'] as String?,
   vetstreetUrl: json['vetstreet_url'] as String?,
   vcahospitalsUrl: json['vcahospitals_url'] as String?,

@@ -67,12 +67,12 @@ flutter:
 
   assets:
     - .env
-    - assets/logo_catbreeds.png
+    - assets/logo.png
 
 
 flutter_native_splash:
   color: "#ffffff"
-  image: assets/logo_catbreeds.png
+  image: assets/logo.png
   android: true
   ios: true
   fullscreen: true
@@ -80,4 +80,4 @@ flutter_native_splash:
 flutter_launcher_icons:
   android: true
   ios: true
-  image_path: "assets/logo_catbreeds.png"
+  image_path: "assets/logo.png"

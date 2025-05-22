@@ -1,5 +1,5 @@
-class Image {
-  Image({
+class BreedImage {
+  BreedImage({
     required this.id,
     required this.width,
     required this.height,

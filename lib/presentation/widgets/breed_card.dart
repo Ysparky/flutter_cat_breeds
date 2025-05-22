@@ -22,10 +22,13 @@ class BreedCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    final cardHeight = size.height * 0.4;
+
     return Hero(
       tag: 'breed-$id',
       child: Container(
-        height: MediaQuery.of(context).size.height * 0.4,
+        height: cardHeight,
         margin: const EdgeInsets.only(bottom: 24),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(32),
@@ -42,7 +45,12 @@ class BreedCard extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(32),
-              child: Image.network(imageUrl, fit: BoxFit.cover),
+              child: Image.network(
+                imageUrl,
+                fit: BoxFit.cover,
+                cacheWidth: (size.width * 1.5).toInt(),
+                cacheHeight: (cardHeight * 1.5).toInt(),
+              ),
             ),
             Container(
               decoration: BoxDecoration(

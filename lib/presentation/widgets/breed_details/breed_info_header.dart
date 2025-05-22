@@ -15,7 +15,7 @@ class BreedInfoHeader extends StatelessWidget {
       children: [
         Text(
           breed.name,
-          style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+          style: Theme.of(context).textTheme.headlineLarge?.copyWith(
             fontWeight: FontWeight.bold,
             color: Colors.black87,
           ),

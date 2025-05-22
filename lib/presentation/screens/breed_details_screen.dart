@@ -51,14 +51,11 @@ class BreedDetailsScreen extends StatelessWidget {
             top: 10,
             left: 10,
             child: SafeArea(
-              child: Padding(
-                padding: const EdgeInsets.all(8),
-                child: CircleAvatar(
-                  backgroundColor: Colors.black.withValues(alpha: .5),
-                  child: IconButton(
-                    icon: const Icon(Icons.arrow_back, color: Colors.white),
-                    onPressed: () => Navigator.of(context).pop(),
-                  ),
+              child: CircleAvatar(
+                backgroundColor: Colors.black.withValues(alpha: .5),
+                child: IconButton(
+                  icon: const Icon(Icons.arrow_back, color: Colors.white),
+                  onPressed: () => Navigator.of(context).pop(),
                 ),
               ),
             ),

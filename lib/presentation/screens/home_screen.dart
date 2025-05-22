@@ -16,8 +16,8 @@ class HomeScreen extends ConsumerWidget {
     final showScrollToTop = ref.watch(showScrollToTopProvider);
 
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.only(top: 20),
+      body: SafeArea(
+        bottom: false,
         child: breeds.when(
           data: (data) => RefreshIndicator.adaptive(
             onRefresh: () async =>

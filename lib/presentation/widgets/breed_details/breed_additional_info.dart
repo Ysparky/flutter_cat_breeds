@@ -14,7 +14,9 @@ class BreedAdditionalInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (wikipediaUrl == null) return const SizedBox.shrink();
+    if (wikipediaUrl == null || wikipediaUrl!.isEmpty) {
+      return const SizedBox.shrink();
+    }
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,

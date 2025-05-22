@@ -101,7 +101,7 @@ class BreedCard extends StatelessWidget {
                               ),
                               style: const TextStyle(fontSize: 14),
                             ),
-                            label: breed.origin,
+                            label: CountryUtils.formatCountry(breed.origin),
                           ),
                           const Spacer(),
                           InfoChip(

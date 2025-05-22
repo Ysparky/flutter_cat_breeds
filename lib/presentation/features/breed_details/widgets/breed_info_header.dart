@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cat_breeds/core/utils/country_utils.dart';
 import 'package:flutter_cat_breeds/domain/entities/breed.dart';
-import 'package:flutter_cat_breeds/presentation/widgets/info_chip.dart';
+import 'package:flutter_cat_breeds/presentation/common/widgets/info_chip.dart';
 
 class BreedInfoHeader extends StatelessWidget {
   const BreedInfoHeader({required this.breed, super.key});

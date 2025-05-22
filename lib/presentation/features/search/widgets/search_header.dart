@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_cat_breeds/presentation/widgets/search_bar.dart';
+import 'package:flutter_cat_breeds/presentation/features/search/widgets/search_bar.dart';
 
 class SearchHeader extends StatelessWidget {
   const SearchHeader({

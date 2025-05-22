@@ -1,7 +1,7 @@
 import 'package:flutter_cat_breeds/domain/entities/breed_with_image.dart';
 import 'package:flutter_cat_breeds/domain/usecases/get_breeds.dart';
-import 'package:flutter_cat_breeds/presentation/providers/pagination_provider.dart';
-import 'package:flutter_cat_breeds/presentation/providers/providers.dart';
+import 'package:flutter_cat_breeds/presentation/common/providers/providers.dart';
+import 'package:flutter_cat_breeds/presentation/features/home/providers/pagination_provider.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'breeds_provider.g.dart';

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cat_breeds/core/utils/debouncer.dart';
-import 'package:flutter_cat_breeds/presentation/providers/search_provider.dart';
-import 'package:flutter_cat_breeds/presentation/providers/search_state_provider.dart';
-import 'package:flutter_cat_breeds/presentation/widgets/search/search_header.dart';
-import 'package:flutter_cat_breeds/presentation/widgets/search/search_results.dart';
+import 'package:flutter_cat_breeds/presentation/features/search/providers/index.dart';
+import 'package:flutter_cat_breeds/presentation/features/search/widgets/index.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final _debouncerProvider = Provider((ref) {

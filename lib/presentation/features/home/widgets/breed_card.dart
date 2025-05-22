@@ -2,8 +2,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cat_breeds/core/utils/country_utils.dart';
 import 'package:flutter_cat_breeds/domain/entities/breed_with_image.dart';
-import 'package:flutter_cat_breeds/presentation/screens/breed_details_screen.dart';
-import 'package:flutter_cat_breeds/presentation/widgets/info_chip.dart';
+import 'package:flutter_cat_breeds/presentation/common/widgets/info_chip.dart';
+import 'package:flutter_cat_breeds/presentation/features/breed_details/screens/breed_details_screen.dart';
 
 class BreedCard extends StatelessWidget {
   const BreedCard({required this.breedWithImage, super.key});

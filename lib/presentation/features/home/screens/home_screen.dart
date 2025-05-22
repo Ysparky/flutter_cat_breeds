@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_cat_breeds/presentation/providers/breeds_provider.dart';
-import 'package:flutter_cat_breeds/presentation/providers/pagination_provider.dart';
-import 'package:flutter_cat_breeds/presentation/providers/scroll_provider.dart';
-import 'package:flutter_cat_breeds/presentation/screens/search_screen.dart';
-import 'package:flutter_cat_breeds/presentation/widgets/breed_card.dart';
+import 'package:flutter_cat_breeds/presentation/features/home/providers/index.dart';
+import 'package:flutter_cat_breeds/presentation/features/home/widgets/breed_card.dart';
+import 'package:flutter_cat_breeds/presentation/features/search/screens/search_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class HomeScreen extends ConsumerWidget {

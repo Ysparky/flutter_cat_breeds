@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cat_breeds/domain/entities/breed_with_image.dart';
-import 'package:flutter_cat_breeds/presentation/widgets/breed_card.dart';
+import 'package:flutter_cat_breeds/presentation/features/home/widgets/breed_card.dart';
 
 class SearchResults extends StatelessWidget {
   const SearchResults({

@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cat_breeds/domain/entities/breed_with_image.dart';
-import 'package:flutter_cat_breeds/presentation/widgets/breed_details/breed_additional_info.dart';
-import 'package:flutter_cat_breeds/presentation/widgets/breed_details/breed_characteristics.dart';
-import 'package:flutter_cat_breeds/presentation/widgets/breed_details/breed_header_image.dart';
-import 'package:flutter_cat_breeds/presentation/widgets/breed_details/breed_info_header.dart';
+import 'package:flutter_cat_breeds/presentation/features/breed_details/widgets/index.dart';
 
 class BreedDetailsScreen extends StatelessWidget {
   const BreedDetailsScreen({required this.breedWithImage, super.key});

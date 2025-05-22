@@ -1,6 +1,6 @@
 import 'package:flutter_cat_breeds/domain/entities/breed_with_image.dart';
 import 'package:flutter_cat_breeds/domain/usecases/search_breed.dart';
-import 'package:flutter_cat_breeds/presentation/providers/providers.dart';
+import 'package:flutter_cat_breeds/presentation/common/providers/providers.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'search_provider.g.dart';
